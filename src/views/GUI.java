@@ -256,7 +256,6 @@ public class GUI extends Application {
 		hbox.setAlignment(Pos.TOP_CENTER); // Set alignment to top center
 		DOWN = new Button("↓");
 		DOWN.setOnAction(e -> {
-			GUI.updateDash();
 			Game.SetHero.setVisible(false);
 			Game.SetTrarget.setVisible(false);
 			try {
@@ -268,10 +267,11 @@ public class GUI extends Application {
 			} catch (NotEnoughActionsException e2) {
 				Alerts.display("WARNING", e2.getMessage());
 			}
+			GUI.updateDash();
 		});
 		UP = new Button("↑");
 		UP.setOnAction(e -> {
-			GUI.updateDash();
+			// GUI.updateDash();
 			Game.SetHero.setVisible(false);
 			Game.SetTrarget.setVisible(false);
 			try {
@@ -282,10 +282,11 @@ public class GUI extends Application {
 			} catch (NotEnoughActionsException e2) {
 				Alerts.display("WARNING", e2.getMessage());
 			}
+			GUI.updateDash();
 		});
 		RIGHT = new Button("→");
 		RIGHT.setOnAction(e -> {
-			GUI.updateDash();
+			// GUI.updateDash();
 			Game.SetHero.setVisible(false);
 			Game.SetTrarget.setVisible(false);
 			try {
@@ -296,10 +297,11 @@ public class GUI extends Application {
 			} catch (NotEnoughActionsException e2) {
 				Alerts.display("WARNING", e2.getMessage());
 			}
+			GUI.updateDash();
 		});
 		LEFT = new Button("←");
 		LEFT.setOnAction(e -> {
-			GUI.updateDash();
+			// GUI.updateDash();
 			Game.SetHero.setVisible(false);
 			Game.SetTrarget.setVisible(false);
 			try {
@@ -310,6 +312,7 @@ public class GUI extends Application {
 			} catch (NotEnoughActionsException e2) {
 				Alerts.display("WARNING", e2.getMessage());
 			}
+			GUI.updateDash();
 		});
 		// ProgressBar b = new ProgressBar(getH().getCurrentHp());
 		GridPane.setConstraints(EndGame, 0, 0);
